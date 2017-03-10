@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact Form | Gentelella Alela! by Colorlib</title>
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+
+  <link href="css/overview.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/map-icons.css">
+
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="contact.html" class="site_title"><span class="text-center">NRB Hackathon</span></a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Bienvenu,</span>
+              <h2>John Doe</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="index2.html">Dashboard2</a></li>
+                    <li><a href="index3.html">Dashboard3</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+
+          </div>
+          <!-- /sidebar menu -->
+
+
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="images/img.jpg" alt="">John Doe
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="javascript:;"> Ajouter une nouvelle surveillence</a></li>
+                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Déconnexion</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+              <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+           
+           <div class="test" id="googleMap" style="width:100%;height:400px;bottom: 0px"></div>
+
+
+           <script>
+            function myMap() {
+              var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:18,
+                draggable:false
+              };
+              map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+              thing = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(51.508742,-0.120850),
+                zindex: 100,
+                title:"Florian"
+              });
+
+
+
+              
+
+              var sunCircle = {
+                strokeColor: "#c3fc49",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#c3fc49",
+                fillOpacity: 0.35,
+                map: map,
+                center: new google.maps.LatLng(51.508742,-0.120850),
+                radius: 30 // in meters
+              };
+              cityCircle = new google.maps.Circle(sunCircle) 
+              //cityCircle.bindTo('center', marker, 'position');
+              
+            }
+          </script>
+
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_2JgxXK9NT6M1oTUUPRKYRb-nTJCY6U8&callback=myMap"></script>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Projects</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+
+                    <!-- start project list -->
+                    <table class="table table-striped projects">
+                      <thead>
+                        <tr>
+                          <th style="width: 1%">#</th>
+                          <th style="width: 10%">Nom</th>
+                          <th style="width: 20%">Horaire</th>
+                          <th style="width: 15%">Notification</th>
+                          <th style="width: 30%">Description</th>
+                          <th>Etat</th>
+                          <th style="width: 20%">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>#</td>
+                          <td>
+                            <a class="titleRule">Ecole</a>
+                          </td>
+                          <td>
+                            <p class="textRule">De 08h00 à 16h00</p>
+                            <div class="btn-group" role="group" aria-label="First group">
+                              <button type="button" class="btn btn-default btn-sm btn-success">L</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">M</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">M</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">J</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">V</button>
+                              <button type="button" class="btn btn-default btn-sm">S</button>
+                              <button type="button" class="btn btn-default btn-sm">D</button>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="textRule"><i class="glyphicon glyphicon-envelope">Email</i>,<i class="glyphicon glyphicon-phone">Phone</i></p>
+                            <input data-onstyle="success" data-size="small" type="checkbox" data-toggle="toggle" data-on="Activées" data-off="Désactivées" >
+                          </td>
+                          <td>
+                            <p class="textRule">s</p>
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-success btn-xs">En sécurité</button>
+                          </td>
+                          <td>
+                            <p href="#" class="btn btn-primary btn-xs buttonView"><i class="fa fa-folder"></i> Afficher </p>
+                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Modifier </a>
+                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Supprimer </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#</td>
+                          <td>
+                            <a class="titleRule">Basket</a>
+                          </td>
+                          <td>
+                            <p class="textRule">De 19h00 à 21h00</p>
+                            <div class="btn-group" role="group" aria-label="First group">
+                              <button type="button" class="btn btn-default btn-sm btn-success">L</button>
+                              <button type="button" class="btn btn-default btn-sm">M</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">M</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">J</button>
+                              <button type="button" class="btn btn-default btn-sm">V</button>
+                              <button type="button" class="btn btn-default btn-sm">S</button>
+                              <button type="button" class="btn btn-default btn-sm">D</button>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="textRule"><i class="glyphicon glyphicon-phone">Phone</i></p>
+                            <input data-onstyle="success" data-size="small" type="checkbox" data-toggle="toggle" data-on="Activées" data-off="Désactivées" >
+                          </td>
+                          <td>
+                            <p class="textRule">Profile permettant de surveiller les déplacements de mon enfant Profile permettant de surveiller les déplacements de mon enfant</p>
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-default btn-xs">Inactif</button>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Afficher </a>
+                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Modifier </a>
+                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Supprimer </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#</td>
+                          <td>
+                            <a class="titleRule">Ecole</a>
+                          </td>
+                          <td>
+                            <p class="textRule">De 08h00 à 16h00</p>
+                            <div class="btn-group" role="group" aria-label="First group">
+                              <button type="button" class="btn btn-default btn-sm btn-success">L</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">M</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">M</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">J</button>
+                              <button type="button" class="btn btn-default btn-sm btn-success">V</button>
+                              <button type="button" class="btn btn-default btn-sm">S</button>
+                              <button type="button" class="btn btn-default btn-sm">D</button>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="textRule"><i class="glyphicon glyphicon-envelope">Email</i>,<i class="glyphicon glyphicon-phone">Phone</i></p>
+                            <input data-onstyle="success" data-size="small" type="checkbox" data-toggle="toggle" data-on="Activées" data-off="Désactivées" >
+                          </td>
+                          <td>
+                            <p class="textRule">Profile permettant de surveiller les déplacements de mon enfant Profile permettant de surveiller les déplacements de mon enfant</p>
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-success btn-xs">En sécurité</button>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Afficher </a>
+                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Modifier </a>
+                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Supprimer </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- end project list -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+
+  <script src="js/overview.js"></script>
+
+
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+</body>
+</html>
